@@ -84,13 +84,16 @@
                         <input type="text" readonly="" class="form-control" id="total" name="total">
                       </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Place Order</button>
+                    <button type="submit" class="btn lst btn-primary">Place Order</button>
                   </form>
             </div>
         </div>
     </div>
 </body>
 <script type="text/javascript">
+    $(document).on('click','.lst',function(){
+      localStorage.clear();
+    })
     if(localStorage.getItem('cart')==null){
         var cart={}
     }     
